@@ -5,8 +5,7 @@ class Solution:
             if n % 2 == 0:
                 s += n
         
-        ret = [0] * len(queries)
-        i = 0
+        ret = []
         for q in queries:
             if nums[q[1]] % 2 == 0:
                 s -= nums[q[1]]
@@ -15,7 +14,6 @@ class Solution:
             if nums[q[1]] % 2 == 0:
                 s += nums[q[1]]
             
-            ret[i] = s
-            i += 1
+            ret.append(s)
         
         return ret
